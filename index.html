@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 13px 50px;
+            background-color: white;
+            position: sticky ;
+             top: 0;
+             bottom: 0;
+             z-index: 1000;   
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 45px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .logo span {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 25px 40px;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: blue;
+        }
+        span:hover{
+         color: blue;
+         }
+        .sec2{
+            color: #fff;
+            background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(./common-bg.svg);
+            background-position: center;
+            height: 100vh;
+            min-height: 0rem;
+            max-height: 120rem;
+            position: relative;
+            gap: 40px;
+        }
+        .section2{
+            display: flex;
+            margin-left: 100px;
+        }
+        .social{
+            position: absolute;
+            left: 0%;
+            top: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .a2{
+            border: 2px solid white;
+            padding: 14px 20px 14px 20px;
+            color: white;
+            font-size: x-large;
+        }
+        .sec2-main-head{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        margin-top: 100px;
+        }
+        .sec2-main-des{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        }
+        .p1{
+            text-align: center;
+            margin: 50px;
+            padding: 10px;
+        }
+        .sec2-button{
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
+        .button1{
+            background-color: white;
+            color: black;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 15px 80px 15px 80px;
+            border: none;
+            border-radius: 5px;
+        }
+        .secabout{
+            background-color: rgb(250, 247, 247);
+            height:140vh;
+            margin-top: -80px;
+            padding: 40px;  
+        }
+        .about {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+            margin-top: 80px;   
+        }
+        .underline {
+            width: 25px;
+            height: 6px;
+            background-color: blue;
+            margin: 8px auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .p2{
+            font-size: 16px;
+            margin-top: 10px;
+            color: gray;
+            max-width: 1500;
+        }
+        .container1 {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: auto;    
+        }
+        .section {
+            width: 48%;    
+        }
+        h2 {
+            text-align: justify;
+            font-size: 30px;
+        }
+        .skills, .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;   
+        }
+        .skill-box {
+            background-color: rgb(215, 212, 212);
+            padding: 8px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+       .know{
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 0 ;
+        padding: 0;
+        font-size: 13px;
+       }
+       .sec3-button{
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;  
+        }
+        .h3{
+            color:black;
+            font-size: 2em;
+            max-width: 600px;
+            margin: 0 auto; 
+            padding: 20px; 
+            text-align: center;
+        }
+        .p3{
+            font-size: 16px;
+          margin: 0 auto;
+            color: gray;
+            max-width: 600px;    
+        }
+        .button2{
+            background-color: rgba(0, 98, 185, 0.8);
+            color: white;
+            font-family: sans-serif;
+            font-size: 18px;
+           font-weight: bold;
+            padding: 10px 40px;
+            border: none;
+            border-radius: 5px; 
+        }
+        .projects{
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+            margin-top: 80px;
+        }
+        .underline1{
+            width: 25px;
+            height: 6px;
+            background-color: blue;
+            margin: 8px auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .p4{
+            font-size: 16px;
+            margin-top: 10px;
+            color: gray;   
+        }
+        .container {
+            display: flex;
+            align-items: center;
+           max-width: 900px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+         justify-content: space-between;
+         margin: auto;   
+        }
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+        .image-container img {
+            width: 90%;
+            max-width: 400px;
+            text-align: center;    
+        }
+        .content {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .h4 {
+            font-size: 24px;
+            margin: 0;
+        } 
+        .btn {
+            display: inline-block;
+            padding: 15px 20px;
+            background-color: rgba(0, 98, 185, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .s4{   
+            background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(./common-bg.svg);
+            background-position: center;
+            height: 100vh;
+            min-height: 0rem;
+            max-height: 120rem;
+            position: relative;
+            gap: 40px;
+            margin: 0px;
+            padding: 30px;
+           margin-bottom: 0;
+           padding-bottom: 0;
+        }
+       .underline2{
+        width: 25px;
+        height: 6px;
+        background-color: white;
+        margin: 8px auto;
+        border-radius: 10px;
+        margin-bottom: 0px;
+       }
+        .p5{
+            font-size: 16px;
+          margin: 0 auto;
+            color: white;
+            max-width: 600px;   
+            text-align: center; 
+        }
+        .containercon {
+       text-align: center;
+        padding: 20px;
+        border-radius: 8px;
+        width: 350px;
+        gap: 10px;
+        top: 30%;
+       left: 35%;
+       position: absolute;     
+    }
+   form{
+    width: 320px;
+    padding: 20px;
+    border-radius: 5px;
+    flex-direction: column;
+   display: flex;
+   gap: 10px;
+   text-align: left;
+   background-color: white;
+   }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+    input, textarea {
+        width: 90%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid gray;
+        border-radius: 5px;
+    }
+    button {
+     align-self: flex-end;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;   
+    }
+    footer {
+    background: black;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    margin-top: auto;
+    width: 100%; 
+}
+.containerf {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
+    margin: 0;
+}
+.footer-left,
+.footer-right {
+    width: 30%;
+}
+.footer-right a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+        header {
+            flex-direction: row;
+            padding: 10px;
+        }
+        .logo {
+            margin-bottom: 10px;
+        }
+        nav ul {
+            flex-direction: column;  
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            display: inline;
+        }
+        nav ul li {
+            margin: 7px ;
+            display: inline;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        .sec2 {
+            height: auto;
+            padding: 20px;
+        }
+        .sec2-main-head h1 {
+            font-size: 24px;
+        }
+        .sec2-main-des p {
+            font-size: 14px;
+            margin: 20px 0;
+        }
+        .button1 {
+            font-size: 16px;
+            padding: 10px 30px;
+        }
+        .secabout {
+            padding: 20px;
+            height: auto;
+        }
+        .container1 {
+            flex-direction: column;
+        }
+        .underline2{
+            margin-bottom: 20px;
+        }
+        form {
+            width: 70%;  
+            padding: 10px; 
+            margin-left: -70px; 
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 90%;  
+        }
+        button {
+            width: 90%;  
+            align-self: stretch;  
+            padding: 12px;  
+        }
+        .section {
+            width: 100%;
+        }
+        .footer-left, .footer-right {
+            width: 100%;
+            text-align: center;
+        }
+        .containerf {
+            flex-direction: column;
+            text-align: center;
+        }
+        .footer-right {
+            margin-top: 20px;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="picture.jpeg" alt="Profile Image">
+            <span>Laxmi Reddy</span>
+        </div>
+        <nav >
+             <ul >
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sec2" >
+        <div class="section2">
+            <div class="social">
+                <div class="linkedin">
+                    <a href="https://www.linkedin.com/in/laxmi-reddy213" class="a2"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <div class="github">
+                    <a href="https://github.com/laxmi-reddy13" class="a2"><i class="fa fa-github"></i></a>
+                </div>
+                <div class="snapchat">
+                    <a href="https://www.snapchat.com/add/laxmi_reddy213?share_id=_tMgM6qk2LQ&locale=en-IN" class="a2"><i class="fa fa-snapchat"></i></a>
+                </div>
+                <div class="youtube">
+                    <a href="https://youtube.com/@laxmireddy-l1u?si=W8Oo1j3T3TSUw9Ng" class="a2"><i class="fa fa-youtube"></i></a>
+                </div>
+                <div class="instagram">
+                    <a href="https://www.instagram.com/laxmi.r13?igsh=MTlnd252c2NjYjdiMw=="class="a2"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="section2-aside">
+                <div class="sec2-main-head">
+                    <h1>HEY, MY NAME IS LAXMI REDDY </H1>
+                </div>
+                <div class="sec2-main-des">
+                    <p class="p1">"I am a highly motivated and enthusiastic individual with a growing passion for web development. I am eager to learn and contribute to creating engaging and user-friendly websites. I am excited to contribute my creativity and problem-solving skills to a dynamic web development."</p>
+                </div>
+                <div class="sec2-button">
+                    <button class="button1">PROJECTS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="secabout">
+    <section class="about">
+        <h2 style="text-align: center;" >ABOUT ME</h2>
+        <div class="underline"></div>
+        <p class="p2"> I'm skilled and creative web developer with a passion for creating beautiful,responsive and user-friendly websites. Aspiring software developer with a passion for building innovative applications and strong problem-solving skills. Seeking an opportunity to contribute to impactful projects and grow in a dynamic organization. </p>
+    </section>
+    <div class="container1">
+        <!-- Interests Section -->
+        <div class="section">
+            <h2 >My Interests</h2>
+            <div class="interests">
+                <span class="skill-box">Responsive Web Design</span>
+                <span class="skill-box">Coding</span>
+                <span class="skill-box">Creativity Activities</span><br>
+                <span class="skill-box">Problem Solving</span>
+                <span class="skill-box">Web Development</span>
+            </div>
+        </div>
+        <!-- Skills Section -->
+        <div class="section">
+            <h2>My Skills</h2>       
+            <h3 style="font-size: 18px;">Technical Skills</h3>
+            <div class="skills">
+                <span class="skill-box">HTML</span>
+                <span class="skill-box">CSS</span>
+                <span class="skill-box">JavaScript</span>
+                <span class="skill-box">React</span>
+                <span class="skill-box">Java</span>
+                <span class="skill-box">C++</span>
+            </div>
+            <h3 style="font-size: 18px;">Soft Skills</h3>
+            <div class="skills">
+                <span class="skill-box">Time Management</span>
+                <span class="skill-box">Problem Solving</span>
+                <span class="skill-box">Team Work</span>
+                <span class="skill-box">Communication Skills</span>
+                <span class="skill-box">Creativity</span>
+            </div>
+        </div>
+    </div><br><br>
+    <div class="know">
+    <h2 class="h3" >Get to know me!</h2>
+    <p class="p3">Hey! It's laxmi Reddy and I'm Software graduated located in telangana. I've done final project during my graduation,also did few static webpages projects.I'm always eager to learn new technologies and passionated web developer </p>
+    <div class="sec3-button">
+        <button class="button2">Contact</button>
+    </div>
+</div></div>
+<section class="projects1">
+    <h2 style="text-align: center;">PROJECTS</h2>
+    <div class="underline1"></div>
+    <p class="p3" >Below projects that showcase my ability in web development. Each project reflects my ability to create responsive, user-friendly, and functional websites.</p>
+</section>
+<div class="container">
+    <div class="image-container">
+        <img src="computer.jpeg" alt="Laptop">
+    </div>
+    <div class="content">
+        <h2 class="h4">Project 1</h2>
+        <p class="p4">This project "vaaradhi farms" is a static webpage design to showcases a collection of creative.</p>
+        <a href="https://loquacious-gumption-4185ef.netlify.app/" class="btn">PROJECT</a>
+    </div>
+</div>
+<div class="container">
+    <div class="image-container">
+        <img src="computer.jpeg" alt="Laptop">
+    </div>
+    <div class="content">
+        <h2 class="h4">Project 2</h2>
+        <p class="p4">This mini project is a static webpages designed to educate users about privacy protection and secure browsing practices.</p>
+        <a href="http://localhost:2024/Privacy%2Daware%20Personal%20Data%20Storage%20PPDS%20Learning/" class="btn">PROJECT</a>
+    </div>
+</div>
+<div class="container">
+    <div class="image-container">
+        <img src="computer.jpeg" alt="Laptop">
+    </div>
+    <div class="content">
+        <h2 class="h4">Project 3</h2>
+        <p class="p4" >This Portfolio website is a simple and well-organized webpage that showcases my skills,projects.</p>
+        <a href="#" class="btn">PROJECT</a>
+    </div>
+</div>
+<div class="s4">
+<h2 style="text-align: center; color: white;">CONTACT</h2>
+<div class="underline2"></div>
+    <p class="p5">Kindly leave your contact information. I will reach out to you at my earliest convenience.
+        I look forward to connecting with you soon.</p>
+   
+    <div class="containercon">       
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div></div>
+<footer >
+    <div class="containerf" >
+        <div class="footer-left">
+            <h3>LAXMI REDDY</h3>
+            <p>Web Developer| Problem Solver|Innovate</p>
+        </div>
+        <div class="footer-right">
+            <h3>SOCIAL</h3>
+                    <a href="https://www.linkedin.com/in/laxmi-reddy213"><i class="fa fa-linkedin"></i></a>                
+                    <a href="https://github.com/laxmi-reddy13"><i class="fa fa-github"></i></a>               
+                    <a href="https://www.snapchat.com/add/laxmi_reddy213?share_id=_tMgM6qk2LQ&locale=en-IN"><i class="fa fa-snapchat"></i></a>
+                    <a href="https://youtube.com/@laxmireddy-l1u?si=W8Oo1j3T3TSUw9Ng"><i class="fa fa-youtube"></i></a>        
+                    <a href="https://www.instagram.com/laxmi.r13?igsh=MTlnd252c2NjYjdiMw=="><i class="fa fa-instagram"></i></a>           
+        </div>
+    </div><br><br><hr><br><br>
+    <p class="copyright">© Copyright 2024. Made by Ram Maheshwari</p>
+</footer>
+</body>
+</html>
